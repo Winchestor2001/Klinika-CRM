@@ -16,8 +16,8 @@ class ServiceAdmin(admin.ModelAdmin):
 
 @admin.register(Patient)
 class PatientAdmin(admin.ModelAdmin):
-    list_display = ['full_name', 'pass_data', 'inspaction', 'staff']
-    search_fields = ['full_name', 'pass_data', 'inspaction']
+    list_display = ['full_name', 'pass_data', 'inspaction', 'staff', 'created_date']
+    search_fields = ['full_name', 'pass_data', 'inspaction', 'created_date']
 
 
 

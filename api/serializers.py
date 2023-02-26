@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import Staff, Patient
 from django.contrib.auth.models import User
+from .models import Staff, Patient, Service
 
 
 class StaffSerializer(serializers.ModelSerializer):
@@ -18,6 +18,12 @@ class UserSerializer(serializers.ModelSerializer):
 class PatientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Patient
+        fields = '__all__'
+
+
+class ServiceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Service
         fields = '__all__'
 
 
